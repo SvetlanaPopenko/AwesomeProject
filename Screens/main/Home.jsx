@@ -7,7 +7,6 @@ import ProfileScreen from "./ProfileScreen";
 import { Feather } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-
 const MainTab = createBottomTabNavigator();
 
 const Home = ({ navigation }) => {

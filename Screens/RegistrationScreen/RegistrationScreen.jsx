@@ -30,6 +30,7 @@ export default function RegistrationScreen({ navigation }) {
     setIsShowKeyboard(false);
     Keyboard.dismiss();
     console.log(state);
+    navigation.navigate("Home");
     setState(initialState);
   };
 

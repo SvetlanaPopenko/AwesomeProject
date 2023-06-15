@@ -27,6 +27,7 @@ export default function LoginScreen({ navigation }) {
     setIsShowKeyboard(false);
     Keyboard.dismiss();
     console.log(state);
+    navigation.navigate("Home");
     setState(initialState);
   };
 
