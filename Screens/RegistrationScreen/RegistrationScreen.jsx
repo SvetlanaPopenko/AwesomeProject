@@ -20,7 +20,7 @@ const initialState = {
   password: "",
 };
 
-export default function RegistrationScreen() {
+export default function RegistrationScreen({ navigation }) {
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
   const [focusInput, setFocusInput] = useState(null);
@@ -146,7 +146,12 @@ export default function RegistrationScreen() {
                 >
                   <Text style={styles.textBtn}>Зареєструватися</Text>
                 </TouchableOpacity>
-                <Text style={styles.text}>Вже є aкаунт?Увійти</Text>
+                <Text
+                  style={styles.text}
+                  onPress={() => navigation.navigate("Login")}
+                >
+                  Вже є aкаунт?Увійти
+                </Text>
               </View>
             </View>
           </KeyboardAvoidingView>

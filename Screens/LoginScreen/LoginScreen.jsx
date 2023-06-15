@@ -17,7 +17,7 @@ const initialState = {
   password: "",
 };
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
   const [focusInput, setFocusInput] = useState(null);
@@ -118,7 +118,12 @@ export default function LoginScreen() {
                 >
                   <Text style={styles.text}>Увійти</Text>
                 </TouchableOpacity>
-                <Text style={styles.text}>Немає акаунту? Зареєструватися</Text>
+                <Text
+                  style={styles.text}
+                  onPress={() => navigation.navigate("Registration")}
+                >
+                  Немає акаунту? Зареєструватися
+                </Text>
               </View>
             </View>
           </KeyboardAvoidingView>
@@ -151,7 +156,7 @@ const styles = StyleSheet.create({
     color: "#212121",
     fontWeight: 500,
     fontSize: 30,
-    lineHeight:35,
+    lineHeight: 35,
     letterSpacing: 0.01,
     textAlign: "center",
     marginBottom: 33,
@@ -177,7 +182,7 @@ const styles = StyleSheet.create({
   inputFocus: {
     borderColor: "#FF6C00",
   },
-   btnPasswordShow: {
+  btnPasswordShow: {
     position: "absolute",
     right: 16,
     top: 16,
@@ -210,5 +215,5 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     fontSize: 16,
     lineHeight: 19,
-  }, 
+  },
 });
