@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const ProfileScreen = () => {
+const CommentsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>ProfileScreen</Text>
+      <Text>CommentsScreen</Text>
     </View>
   );
 };
@@ -17,5 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfileScreen;
-
+export default CommentsScreen;

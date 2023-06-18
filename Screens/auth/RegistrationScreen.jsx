@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -20,7 +20,7 @@ const initialState = {
   password: "",
 };
 
-export default function RegistrationScreen({ navigation }) {
+const RegistrationScreen=({ navigation })=> {
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
   const [focusInput, setFocusInput] = useState(null);
@@ -275,3 +275,5 @@ const styles = StyleSheet.create({
     lineHeight: 19,
   },
 });
+
+export default RegistrationScreen;
